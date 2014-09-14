@@ -5177,6 +5177,16 @@ This module adds a code editor that shows up in individual slides
     var config = $element.data("config");
     config.html = unsanitize($element.html());
 
+    if($container.hasClass('coderEditor')) {
+      if(config.isInstant) {
+        $destination.show();
+        setTimeout(function() {
+          runCode($element,$element.attr('data-coder-template'));
+        },10);
+      }
+      return;
+    }
+
     if(config.isSaving) { loadFromLocalStorage($element,config); }
 
     $element.css('visibility','visible');
@@ -5196,7 +5206,7 @@ This module adds a code editor that shows up in individual slides
         $destination.show();
         runCode($element,$element.attr('data-coder-template'));
       });
-    }
+    } 
 
     if(config.isFull) { 
       $backButton = createBackbutton($buttonWrapper,function() {
@@ -5279,9 +5289,7 @@ This module adds a code editor that shows up in individual slides
   function displayCodeSlide(slide) {
     slide.find(".coder-wrapper").each(function() {
       var $container = $(this);
-      if(!$container.hasClass('coderEditor')) {
-        generateCodeSlide($container,slide);
-      }
+      generateCodeSlide($container,slide);
       resizeEditors(slide,$container);
     });
 

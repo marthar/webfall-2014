@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>jQuery FTW!</title>
 	<meta name="viewport" content="width=1024">
-	<link rel="stylesheet" href="dist/coderdeck-core.min.css" type="text/css">
+    <link rel="stylesheet" href="dist/coderdeck-core.min.css" type="text/css">
 
 	<link rel="stylesheet" id='style-theme-link' href="src/css/coderdeck.css" type="text/css" >
 
@@ -13,11 +13,6 @@
 
 	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
 
-	<!-- Replace path with correct path to Modernizr file. -->
-
-	<script src='dist/jquery.min.js'></script>
-	<script src="dist/modernizr.js"></script>	
-	
 </head>
 <body class="deck-container">
 	<script type='text/coderdeck' id='coderdeck-default'>
@@ -122,65 +117,10 @@
 	</ol>
 </article>
 
-<article class='slide slide-accent'>
+<article class='slide slide-subhead'>
 <h1>Homework</h1>
+<h2><a href="homework-monday.html">Monday </a>|<a href="homework-friday.html"> Friday</a></h2>
 </article>
-
-<article class="slide slide-list">
-	<h2>Homework Review</h2>
-	<script>
-(function($){
- 
-    $.fn.shuffle = function() {
- 
-        var allElems = this.get(),
-            getRandom = function(max) {
-                return Math.floor(Math.random() * max);
-            },
-            shuffled = $.map(allElems, function(){
-                var random = getRandom(allElems.length),
-                    randEl = $(allElems[random]).clone(true)[0];
-                allElems.splice(random, 1);
-                return randEl;
-           });
- 
-        this.each(function(i){
-            $(this).replaceWith($(shuffled[i]));
-        });
- 
-        return $(shuffled);
- 
-    };
- 
-})(jQuery);
-
-function shuffleHomework(amt) {
-	if(amt <= 0) return;
-	$("#homework li").shuffle();
-	setTimeout(function() { shuffleHomework(amt - 1); },200);
-}
-
-	</script>
-	<a href='javascript:shuffleHomework(10);'>Shuffle</a>
-	<ul id='homework'>
-		<li><a href='http://heathermendonca.github.com/homework/index.html'>heathermendonca</a></li>
-		<li><a href='http://jmfisherr.github.com/homework/index.html'>jmfisherr</a></li>
-		<li><a href='http://yeesusanna.github.com/homework/index.html'>yeesusanna</a></li>
-		<li><a href='http://krhogan.github.com/homework/index.html'>krhogan</a></li>
-		<li><a href='http://nopsketchbook.github.com/homework/index.html'>nopsketchbook</a></li>
-		<li><a href='http://lkfenton.github.com/homework/index.html'>lkfenton</a></li>
-		<li><a href='http://bejohnston.github.com/homework/index.html'>bejohnston</a></li>
-		<li><a href='http://annacolleenc.github.com/homework/homework.html'>annacolleenc</a></li>
-		<li><a href='http://hisakanishibayashi.github.com/homework/index.html'>hisakanishibayashi</a></li>
-		<li><a href='http://marthabarry.github.com/homework/index.html'>marthabarry</a></li>
-		<li><a href='http://trwhite.github.com/homework/index.html'>trwhite</a></li>
-		<li><a href='http://themusicmaker.github.com/homework/index.html'>themusicmaker</a></li>
-		<li><a href='http://ktengprawat.github.com/homework/index.html'>ktengprawat</a></li>
-		<li><a href='http://digihex.github.com/homework/index.html'>digihex</a></li>
-	</ul>
-</article>
-
-
 <article class='slide slide-subhead'>
    <h1>HTML/CSS Are Static</h1>
    <h3>(Now only mostly true, as you can add interactivity via CSS Hover, Animation)</h3>
@@ -934,6 +874,10 @@ if($_REQUEST['contact']) {
 </article>
 
 <script src='dist/coderdeck.min.js'></script>
+
+<!-- Prettify -->
+<script src="src/prettify.js"></script>
+
 
 <script>
 	$(function() {

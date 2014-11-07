@@ -36,7 +36,8 @@
       margin-left: 2em;
       text-align: left;
       color: #444444;
-      margin-bottom: .3em; }
+      margin-bottom: .3em;
+      line-height: 1.6em; }
     .deck-container .slide-list h4 {
       margin-left: 1em;
       text-align: left;
@@ -58,6 +59,12 @@
       line-height: 1.3em; }
     .deck-container .slide-list img {
       margin: 0; }
+    .deck-container .slide-list .mobile {
+      width: 320px;
+      display: inline-block;
+      margin-left: 2em;
+      clear: left;
+      margin-bottom: 2em; }
   .deck-container .slide-subhead h1 {
     margin: 0px;
     padding-top: 2em;
@@ -179,6 +186,10 @@
       text-align: center;
       text-transform: none;
       padding-top: 0; }
+      .deck-container .slide-accent p a {
+        color: #cccccc; }
+        .deck-container .slide-accent p a:hover {
+          color: white; }
   .deck-container .slide-homework {
     padding: 0 10%;
     background: #444444; }

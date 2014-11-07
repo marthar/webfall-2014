@@ -61,7 +61,7 @@ $gray-color:#CCC;
 		text-align:left;
 		h1 { margin:0; padding-top:.35em; text-align:left; @include no-transform; padding-bottom:.3em;}
 		h2 { margin:0; padding-left:.75em; padding-top:.5em; text-align:left; padding-bottom:.3em; }
-		h3 { margin-left:2em; text-align:left; color:$main-color; margin-bottom:.3em;}
+		h3 { margin-left:2em; text-align:left; color:$main-color; margin-bottom:.3em; line-height:1.6em;}
 		h4 { margin-left:1em; text-align:left;  margin-top:1em;}
 		ol,ul { margin-bottom:.3em; padding-left:1.1em;  list-style-type: square; color:$callout-color; }
 		li { padding-left:.5em; text-align:left;
@@ -69,6 +69,7 @@ $gray-color:#CCC;
 		}
 		p { margin-top:-.75em; margin-left:2em; text-align:left; line-height:1.3em;}
 		img {margin:0;}
+		.mobile { width:320px; display:inline-block; margin-left:2em; clear:left; margin-bottom:2em;}
 		
 	}
 	
@@ -117,7 +118,10 @@ $gray-color:#CCC;
 		}
 		h2 { color:white; @include no-transform; padding-top:3em;}
 		h3 { color:white; @include no-transform; padding-top:3em;}
-		p { font-size:1.5em; color:white; text-align:center; text-transform:none; padding-top:0;}
+		p { font-size:1.5em; color:white; text-align:center; text-transform:none; padding-top:0;
+			a { color:$gray-color; 
+					&:hover {color:white;}	
+				}}
 			
 	}
 	.slide-homework {

@@ -477,12 +477,13 @@ document.write("Let's write some HTML right here!");
 
 
 <article class='slide slide-statement'>
-<h1><a href="http://fancybox.net/">jQuery LightBox</a></h1>
+<h1><a href="http://fancyapps.com/fancybox/">jQuery LightBox</a></h1>
 </article>
 
 
 <article class='slide slide-statement'>
-<h1><a href="http://nivo.dev7studios.com/">Nivo Slider</a></h1>
+<h1><a href="http://docs.dev7studios.com/jquery-plugins/nivo-slider">Nivo Slider</a></h1>
+<p><a href="https://github.com/gilbitron/Nivo-Slider">Github Download</a></p>
 </article>
 
 <article class='slide slide-list'>
@@ -706,8 +707,174 @@ header h1 {
 </section>	
 
 </script>
-
 </article>
+
+<article class='slide slide-accent'>
+	<h1>Nav Dropdowns and Flyouts</h1>
+</article>
+
+<article class='slide slide-list'>
+<h2>Basic Navbar</h2>
+<p>hidden dropdown set-up</p>
+<textarea class='coder-editor coder-editor-full'>
+<style>
+
+#menu {  
+    list-style:none;  
+    width:940px;  
+    margin:30px auto 0px auto;  
+    height:43px;  
+    padding:0px 20px 0px 20px;  
+}
+
+#menu li {  
+    float:left;  
+    display:block;  
+    text-align:center;  
+    position:relative;  
+    padding: 6px 17px;  
+    margin-right:10px;  
+    margin-top:7px;  
+    border: 1px solid white;  
+}
+
+#menu li:hover {  
+    border: 1px solid #E0E0E0;  
+    background: #F4F4F4;  
+
+}
+
+#menu li a {  
+    font-family:Arial, Helvetica, sans-serif;  
+    font-size:14px;  
+    color: gray;  
+    display:block;  
+    outline:0;  
+    text-decoration:none;  
+}
+
+#menu li ul {
+	display:none;
+	position:absolute;
+	top:20px;
+}
+
+</style>
+
+<ul id="menu">  
+    <li><a href="#">Home</a></li>  
+    <li><a href="#">About</a></li>  
+    <li><a href="#">Portfolio</a> 
+ 		<ul>
+		   <li><a href="#">Print</a></li>  
+		   <li><a href="#">Photography</a></li>  
+		   <li><a href="#">Web</a></li>
+		</ul></li>
+    <li><a href="#">Contact</a></li>  
+</ul>
+</textarea>
+</article>
+
+
+<article class='slide slide-list'>
+<h2>Nav Drop-Down</h2>
+<p>Adding :hover selector</p>
+<textarea class='coder-editor coder-editor-full'>
+<style>
+
+
+#menu {  
+    list-style:none;  
+    width:940px;  
+    margin:30px auto 0px auto;  
+    height:43px;  
+    padding:0px 20px 0px 20px;  
+}
+
+#menu li {  
+    float:left;  
+    display:block;  
+    text-align:center;  
+    position:relative;  
+    padding: 6px 17px;  
+    margin-right:10px;  
+    margin-top:7px;  
+    border: 1px solid white;  
+}
+
+#menu li:hover {  
+    border: 1px solid #E0E0E0;  
+    background: #F4F4F4;  
+
+}
+
+
+#menu li a {  
+    font-family:Arial, Helvetica, sans-serif;  
+    font-size:14px;  
+    color: gray;  
+    display:block;  
+    outline:0;  
+    text-decoration:none;  
+}
+
+#menu li ul {
+	display:none;
+	position:absolute;
+	top:30px;
+	left:-41px;
+}
+
+#menu li:hover ul {
+	display:block;
+	
+}
+
+#menu li ul li{  
+    float:left;  
+    display:block;  
+    text-align:center;  
+    position:relative;  
+    padding: 4px 17px 4px 17px;  
+    margin-right:10px;  
+    margin-top:7px;  
+    border: 1px solid white;  
+}
+
+</style>
+
+<ul id="menu">  
+    <li><a href="#">Home</a></li>  
+    <li><a href="#">About</a></li>  
+    <li><a href="#">Portfolio</a> 
+ 		<ul>
+		   <li><a href="#">Print</a></li>  
+		   <li><a href="#">Photography</a></li>  
+		   <li><a href="#">Web</a></li>
+		</ul></li>
+    <li><a href="#">Contact</a></li>  
+</ul>
+
+</textarea>
+</article>
+
+
+<article class='slide slide-subhead'>
+<h1>Useful Tricks</h1>
+<h3>
+	<ul>
+		<li><a href="http://codepen.io/icutpeople/pen/Kcxdp">Hamburger to X CSS animation</a></li>
+		<li><a href="http://www.valdelama.com/css-responsive-navigation">Flyout - pure CSS</a></li>
+		<li><a href="http://dev7studios.com/dropit/">On Click Dropdown - jQuery</a></li>
+		<li><a href="http://tympanus.net/Development/ParallaxContentSlider/index3.html">Styling Text Inputs</a></li>
+		<li><a href="http://sublimeorange.com/uncategorized/css3-speech-bubble/l">CSS3 Speech Bubble</a></li>
+		<li><a href="http://css-tricks.com/snippets/jquery/make-entire-div-clickable/">Make Entire Div Clickable</a></li>
+		<li><a href="http://css-tricks.com/snippets/css/sticky-footer/">Sticky Footer #2</a></li>
+	</ul>	
+</article>
+
+
+
 
 <article class='slide slide-subhead'>
 	<h1>Hosting &amp; FTPing your website</h1>
